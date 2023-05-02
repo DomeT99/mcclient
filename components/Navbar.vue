@@ -4,9 +4,7 @@
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
         <img
-          src="https://bulma.io/images/bulma-logo.png"
-          width="112"
-          height="28"
+          src="@/public/icons/icon-144x144.png"
         />
       </a>
 
@@ -27,17 +25,16 @@
       <div class="navbar-start">
         <a class="navbar-item"> Home </a>
 
-        <a class="navbar-item"> Documentation </a>
+        <a class="navbar-item"> Search </a>
 
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link"> More </a>
+          <a class="navbar-link"> Categories</a>
 
           <div class="navbar-dropdown">
-            <a class="navbar-item"> About </a>
-            <a class="navbar-item"> Jobs </a>
-            <a class="navbar-item"> Contact </a>
-            <hr class="navbar-divider" />
-            <a class="navbar-item"> Report an issue </a>
+            <a class="navbar-item">Electronics</a>
+            <a class="navbar-item">Men's Clothing</a>
+            <a class="navbar-item">Women's Clothing</a>
+            <a class="navbar-item"> Jewelery </a>
           </div>
         </div>
       </div>
@@ -45,10 +42,9 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light"> Log in </a>
+            <button class="button is-primary">
+              <strong>Cart</strong>
+            </button>
           </div>
         </div>
       </div>
