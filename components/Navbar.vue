@@ -1,11 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { EButton } from "easy-kit-component";
+</script>
+
+
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
-        <img
-          src="@/public/icons/icon-144x144.png"
-        />
+        <img src="@/public/icons/icon-144x144.png" />
       </a>
 
       <a
@@ -42,9 +44,9 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <button class="button is-primary">
+            <EButton class="button is-primary">
               <strong>Cart</strong>
-            </button>
+            </EButton>
           </div>
         </div>
       </div>
