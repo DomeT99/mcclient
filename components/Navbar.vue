@@ -2,7 +2,6 @@
 import { EButton } from "easy-kit-component";
 </script>
 
-
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -45,6 +44,12 @@ import { EButton } from "easy-kit-component";
         <div class="navbar-item">
           <div class="buttons">
             <EButton class="button is-primary">
+              <strong>Cart</strong>
+            </EButton>
+            <EButton class="button is-secondary">
+              <strong>Cart</strong>
+            </EButton>
+            <EButton class="button is-tertiary">
               <strong>Cart</strong>
             </EButton>
           </div>

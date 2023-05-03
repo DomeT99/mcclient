@@ -1,0 +1,30 @@
+@mixin generate-font($family, $weight, $size: 0, $color: empty) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+
+  @if $size != 0 {
+    font-size: $size;
+  }
+
+  @if $color != empty {
+    color: $color;
+  }
+}
+
+@mixin generate-button($bgcolor, $color, $hovercolor) {
+  background-color: $bgcolor;
+  color: $color;
+
+  &:hover,
+  &:active,
+  &.is-active {
+    background-color: $hovercolor;
+    border-color: transparent;
+  }
+
+  &:focus:not(:active),
+  &.is-focused:not(:active) {
+    box-shadow: none;
+    border-color: transparent;
+  }
+}

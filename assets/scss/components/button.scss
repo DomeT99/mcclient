@@ -1,0 +1,22 @@
+@use "../utils/colors";
+@use "../utils/mixins";
+
+$primary: colors.$primary-color;
+$primary-dark: colors.$primary-color-dark;
+$secondary: colors.$secondary-color;
+$secondary-dark: colors.$secondary-color-dark;
+$tertiary: colors.$tertiary-color;
+$tertiary-dark: colors.$tertiary-color-dark;
+$quinary: $quinary-color;
+
+.button {
+  &.is-primary {
+    @include mixins.generate-button($primary, $quinary, $primary-dark);
+  }
+  &.is-secondary {
+    @include mixins.generate-button($secondary, $quinary, $secondary-dark);
+  }
+  &.is-tertiary {
+    @include mixins.generate-button($tertiary, colors.$title-color, $tertiary-dark);
+  }
+}
