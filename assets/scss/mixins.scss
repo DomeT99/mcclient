@@ -1,0 +1,12 @@
+@mixin generate-font($family, $weight, $size: 0, $color:empty) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+
+  @if $size != 0 {
+    font-size: $size;
+  }
+
+  @if $color != empty {
+    color: $color;
+  }
+}
