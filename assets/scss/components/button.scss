@@ -11,12 +11,27 @@ $quinary: $quinary-color;
 
 .button {
   &.is-primary {
-    @include mixins.generate-button($primary, $quinary, $primary-dark);
+    @include mixins.generate-button(
+      $primary,
+      $quinary,
+      $primary-dark,
+      transparent
+    );
   }
   &.is-secondary {
-    @include mixins.generate-button($secondary, $quinary, $secondary-dark);
+    @include mixins.generate-button(
+      $secondary,
+      $quinary,
+      $secondary-dark,
+      transparent
+    );
   }
   &.is-tertiary {
-    @include mixins.generate-button($tertiary, colors.$title-color, $tertiary-dark);
+    @include mixins.generate-button(
+      $tertiary,
+      colors.$title-color,
+      $tertiary-dark,
+      transparent
+    );
   }
 }

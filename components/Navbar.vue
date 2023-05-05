@@ -1,11 +1,50 @@
 <script setup lang="ts">
 import { EButton } from "easy-kit-component";
+
+onMounted(() => {
+  openBurger();
+});
+
+
+function openBurger() {
+  const $navbarBurgers = Array.prototype.slice.call(
+    document.querySelectorAll(".navbar-burger"),
+    0
+  );
+
+  $navbarBurgers.forEach((element) => {
+    element.addEventListener("click", () => {
+      const target = element.dataset.target;
+      const $target = document.getElementById(target) as HTMLElement;
+
+      element.classList.toggle("is-active");
+
+      $target.classList.toggle("is-active");
+    });
+  });
+}
+function scrollToTop() {
+  const navbar = document.querySelector(".navbar");
+  const trigger = window.scrollY;
+  const navbarHeight = navbar!.clientHeight;
+
+  if (trigger >= navbarHeight) {
+    navbar!.setAttribute("style", "background-color: hsl(0 100% 100% / 1)");
+  } else {
+    navbar!.setAttribute("style", "background-color: hsl(0 100% 100% / 0.7)");
+  }
+}
 </script>
 
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav
+    @scroll="scrollToTop"
+    class="navbar is-fixed-top"
+    role="navigation"
+    aria-label="main navigation"
+  >
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
+      <a class="navbar-item">
         <img src="@/public/icons/icon-144x144.png" />
       </a>
 
@@ -14,7 +53,7 @@ import { EButton } from "easy-kit-component";
         class="navbar-burger"
         aria-label="menu"
         aria-expanded="false"
-        data-target="navbarBasicExample"
+        data-target="navbar-id"
       >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -22,20 +61,28 @@ import { EButton } from "easy-kit-component";
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div id="navbar-id" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item"> Home </a>
+        <NuxtLink class="navbar-item is-hoverable" to="/"> Home </NuxtLink>
 
-        <a class="navbar-item"> Search </a>
+        <NuxtLink class="navbar-item is-hoverable" to="/search">
+          Search
+        </NuxtLink>
 
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link"> Categories</a>
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link is-hoverable"> Categories</a>
 
-          <div class="navbar-dropdown">
-            <a class="navbar-item">Electronics</a>
-            <a class="navbar-item">Men's Clothing</a>
-            <a class="navbar-item">Women's Clothing</a>
-            <a class="navbar-item"> Jewelery </a>
+          <div class="navbar-dropdown is-hoverable">
+            <NuxtLink class="navbar-item" to="/electronics"
+              >Electronics</NuxtLink
+            >
+            <NuxtLink class="navbar-item" to="/menclothing"
+              >Men's Clothing</NuxtLink
+            >
+            <NuxtLink class="navbar-item" to="/womenclothing"
+              >Women's Clothing</NuxtLink
+            >
+            <NuxtLink class="navbar-item" to="/jewelery"> Jewelery </NuxtLink>
           </div>
         </div>
       </div>
@@ -44,13 +91,10 @@ import { EButton } from "easy-kit-component";
         <div class="navbar-item">
           <div class="buttons">
             <EButton class="button is-primary">
-              <strong>Cart</strong>
+              <strong>Login</strong>
             </EButton>
             <EButton class="button is-secondary">
-              <strong>Cart</strong>
-            </EButton>
-            <EButton class="button is-tertiary">
-              <strong>Cart</strong>
+              <strong>Sign up</strong>
             </EButton>
           </div>
         </div>

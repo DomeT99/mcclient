@@ -11,7 +11,7 @@
   }
 }
 
-@mixin generate-button($bgcolor, $color, $hovercolor) {
+@mixin generate-button($bgcolor, $color, $hovercolor,$bordercolor:inherit) {
   background-color: $bgcolor;
   color: $color;
 
@@ -19,12 +19,21 @@
   &:active,
   &.is-active {
     background-color: $hovercolor;
-    border-color: transparent;
+    border-color: $bordercolor;
   }
 
   &:focus:not(:active),
   &.is-focused:not(:active) {
     box-shadow: none;
-    border-color: transparent;
+    border-color: $bordercolor;
+  }
+}
+
+@mixin generate-hover-focus-navbar($bradius, $bgcolor, $color) {
+  &:hover,
+  &:focus {
+    border-radius: $bradius;
+    background-color: $bgcolor;
+    color: $color;
   }
 }
