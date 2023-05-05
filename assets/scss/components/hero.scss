@@ -1,0 +1,7 @@
+@use "../utils/colors.scss";
+
+.hero {
+  &.is-quaternary {
+    background-color: colors.$quaternary-color;
+  }
+}
