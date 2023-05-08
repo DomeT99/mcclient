@@ -5,7 +5,6 @@ onMounted(() => {
   openBurger();
 });
 
-
 function openBurger() {
   const $navbarBurgers = Array.prototype.slice.call(
     document.querySelectorAll(".navbar-burger"),
@@ -73,16 +72,18 @@ function scrollToTop() {
           <a class="navbar-link is-hoverable"> Categories</a>
 
           <div class="navbar-dropdown is-hoverable">
-            <NuxtLink class="navbar-item" to="/electronics"
+            <NuxtLink class="navbar-item" to="/categories/electronics"
               >Electronics</NuxtLink
             >
-            <NuxtLink class="navbar-item" to="/menclothing"
+            <NuxtLink class="navbar-item" to="/categories/mensclothing"
               >Men's Clothing</NuxtLink
             >
-            <NuxtLink class="navbar-item" to="/womenclothing"
+            <NuxtLink class="navbar-item" to="/categories/womensclothing"
               >Women's Clothing</NuxtLink
             >
-            <NuxtLink class="navbar-item" to="/jewelery"> Jewelery </NuxtLink>
+            <NuxtLink class="navbar-item" to="/categories/jewelery">
+              Jewelery
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -90,12 +91,12 @@ function scrollToTop() {
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <EButton class="button is-primary">
-              <strong>Login</strong>
-            </EButton>
-            <EButton class="button is-tertiary">
-              <strong>Sign up</strong>
-            </EButton>
+            <NuxtLink class="button is-primary" to="/customer/login">
+                <strong>Login</strong>
+            </NuxtLink>
+            <NuxtLink class="button is-tertiary" to="/customer/signup">
+                <strong>Sign up</strong>
+            </NuxtLink>
           </div>
         </div>
       </div>
