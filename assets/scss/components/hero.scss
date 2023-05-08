@@ -1,7 +1,14 @@
 @use "../utils/colors.scss";
 
 .hero {
+  &.is-secondary {
+    background-color: colors.$secondary-color;
+  }
   &.is-quaternary {
     background-color: colors.$quaternary-color;
+  }
+  
+  .subtitle{
+    color: colors.$paragraph-color;
   }
 }

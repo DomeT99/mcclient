@@ -1,10 +1,10 @@
 <script setup lang="ts"></script>
 <template>
-  <section class="hero is-quaternary is-halfheight">
+  <section class="hero is-secondary  is-halfheight">
     <div class="hero-body">
-      <div class="">
-        <p class="title">Fullheight hero</p>
-        <p class="subtitle">Fullheight subtitle</p>
+      <div>
+        <p class="title has-text-white">Micro Commerce</p>
+        <p class="subtitle">Micro prices, macro selection</p>
       </div>
     </div>
   </section>

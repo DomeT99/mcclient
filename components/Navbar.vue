@@ -93,7 +93,7 @@ function scrollToTop() {
             <EButton class="button is-primary">
               <strong>Login</strong>
             </EButton>
-            <EButton class="button is-secondary">
+            <EButton class="button is-tertiary">
               <strong>Sign up</strong>
             </EButton>
           </div>
