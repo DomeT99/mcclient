@@ -1,6 +1,11 @@
 @import "bulma/css/bulma.css";
+
+@import "./pagination/layout.scss";
+
 @import "./utils/colors.scss";
 @import "./utils/font.scss";
+
+
 @import "./components/button.scss";
 @import "./components/navbar.scss";
 @import "./components/hero.scss";
