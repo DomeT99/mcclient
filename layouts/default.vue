@@ -10,9 +10,15 @@ const dynamicTitle = computed(() => useUpperCase(useRoute().name?.toString()!));
       {{ dynamicTitle === "Index" ? "Home" : dynamicTitle }}</Title
     >
     <Navbar />
-    <section>
+    <section class="min-h-100">
       <slot></slot>
     </section>
-    <Footer />
   </Head>
+  
+  <Footer />
 </template>
+<style scoped>
+.min-h-100{
+  min-height: 100vh;
+}
+</style>

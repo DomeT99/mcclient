@@ -1,0 +1,13 @@
+@use "../utils/colors.scss";
+
+.footer {
+  background-color: colors.$primary-color-dark;
+  p,
+  strong,
+  a {
+    color: colors.$quinary-color;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
