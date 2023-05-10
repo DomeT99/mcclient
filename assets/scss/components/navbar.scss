@@ -9,7 +9,8 @@ $black: colors.$black;
 
 .navbar {
   border-bottom: 1px solid $black;
-  background-color: hsl(0 100% 100% / 0.4);
+  background-color: colors.$quinary-color;
+  height: 70px;
 
   .navbar-item {
     &.is-hoverable {

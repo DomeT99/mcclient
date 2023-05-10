@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { EButton } from "easy-kit-component";
 
 onMounted(() => {
   openBurger();
@@ -22,23 +21,11 @@ function openBurger() {
     });
   });
 }
-function scrollToTop() {
-  const navbar = document.querySelector(".navbar");
-  const trigger = window.scrollY;
-  const navbarHeight = navbar!.clientHeight;
-
-  if (trigger >= navbarHeight) {
-    navbar!.setAttribute("style", "background-color: hsl(0 100% 100% / 1)");
-  } else {
-    navbar!.setAttribute("style", "background-color: hsl(0 100% 100% / 0.7)");
-  }
-}
 </script>
 
 <template>
   <nav
-    @scroll="scrollToTop"
-    class="navbar is-fixed-top"
+    class="navbar"
     role="navigation"
     aria-label="main navigation"
   >
