@@ -14,3 +14,16 @@ $paragraph-color:#3d3d3d;
 
 
 $black:#000;
+
+.bg-primary{
+    background-color: $primary-color;
+}
+.bg-secondary{
+    background-color: $secondary-color;
+}
+.bg-tertiary-dark{
+    background-color: $tertiary-color-dark;
+}
+.bg-quaternary{
+    background-color: $quaternary-color;
+}

@@ -1,0 +1,8 @@
+@use "../utils/colors.scss";
+@use "../utils/mixins.scss";
+
+.input {
+  &.is-primary {
+    @include mixins.generate-input(colors.$primary-color);
+  }
+}

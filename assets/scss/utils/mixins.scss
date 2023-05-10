@@ -11,7 +11,7 @@
   }
 }
 
-@mixin generate-button($bgcolor, $color, $hovercolor,$bordercolor:inherit) {
+@mixin generate-button($bgcolor, $color, $hovercolor, $bordercolor: inherit) {
   background-color: $bgcolor;
   color: $color;
 
@@ -36,4 +36,13 @@
     background-color: $bgcolor;
     color: $color;
   }
+}
+
+@mixin generate-input($bordercolor, $boxshadow: none) {
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: $boxshadow;
+  }
+  border-color: $bordercolor;
 }
