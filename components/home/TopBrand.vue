@@ -1,24 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+interface TopBrand {
+  names?: string[];
+}
+
+const props = defineProps<TopBrand>();
+</script>
 <template>
   <header class="ml-2">
     <h3>Top Brand</h3>
   </header>
-  <div class="columns is-mobile mt-4">
-    <div class="column">
-      <p class="mt-4">Nike</p>
-      <p class="mt-4">Puma</p>
-      <p class="mt-4">Adidas</p>
-      <p class="mt-4">Samsung</p>
-      <p class="mt-4">Apple</p>
-      <p class="mt-4">Microsoft</p>
-    </div>
-    <div class="column">
-      <p class="mt-4">Nike</p>
-      <p class="mt-4">Puma</p>
-      <p class="mt-4">Adidas</p>
-      <p class="mt-4">Samsung</p>
-      <p class="mt-4">Apple</p>
-      <p class="mt-4">Microsoft</p>
+  <div class="columns is-multiline is-mobile mt-4">
+    <div class="column is-half" v-for="name of props.names" :key="name">
+      <p class="mt-4">{{ name }}</p>
     </div>
   </div>
 </template>
