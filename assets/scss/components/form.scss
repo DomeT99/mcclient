@@ -1,0 +1,8 @@
+@use "../utils/colors.scss";
+
+.form {
+  border: 2px solid colors.$tertiary-color-dark;
+  border-radius: 10px;
+  min-height: 50vh;
+  box-shadow: 1px 1px 2px colors.$paragraph-color;
+}

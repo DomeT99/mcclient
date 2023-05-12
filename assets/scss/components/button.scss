@@ -7,6 +7,7 @@ $secondary: colors.$secondary-color;
 $secondary-dark: colors.$secondary-color-dark;
 $tertiary: colors.$tertiary-color;
 $tertiary-dark: colors.$tertiary-color-dark;
+$quaternary: colors.$quaternary-color;
 $quinary: $quinary-color;
 
 .button {
@@ -31,6 +32,15 @@ $quinary: $quinary-color;
       $tertiary,
       colors.$title-color,
       $tertiary-dark,
+      transparent
+    );
+  }
+
+  &.is-quaternary {
+    @include mixins.generate-button(
+      $quaternary,
+      $quinary,
+      $quaternary,
       transparent
     );
   }
