@@ -36,16 +36,19 @@ export default defineNuxtConfig({
           src: "icons/icon-512x512.png",
           sizes: "512x512",
           type: "image/png",
-        }
-      ]
+        },
+      ],
     },
     workbox: {
       navigateFallback: "/",
     },
-    devOptions:{
+    devOptions: {
       enabled: true,
       type: "module",
-    }
+    },
   },
-  css:["/assets/scss/main.scss"],
+  css: ["/assets/scss/main.scss"],
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
 });
