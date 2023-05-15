@@ -1,6 +1,6 @@
-import { ContentForm } from "~/components/signup/ContentForm.vue";
+import { ContentForm } from "~/components/ContentForm.vue";
 
-export const contentForm: ContentForm[] = [
+export const signUpForm: ContentForm[] = [
   {
     label: "Name",
   },
@@ -10,5 +10,10 @@ export const contentForm: ContentForm[] = [
   { label: "Email" },
   { label: "Phone" },
   { label: "Password" },
-  { label: "Confirm Password" }
+  { label: "Confirm Password" },
+];
+
+export const loginForm: ContentForm[] = [
+  { label: "Email" },
+  { label: "Password" },
 ];
