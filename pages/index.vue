@@ -27,13 +27,7 @@ const brands = [
     </section>
 
     <section class="mt-6 bg-tertiary-dark">
-      <div class="has-text-centered pt-6">
-        <h2>Subscribe to the newsletter</h2>
-      </div>
-
-      <div class="mt-6 min-h-25">
-        <HomeNewsLetter />
-      </div>
+      <HomeNewsLetter />
     </section>
   </section>
 </template>
